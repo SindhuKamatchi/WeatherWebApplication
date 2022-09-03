@@ -8,7 +8,7 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WeatherForecase
+namespace WeatherForecast
 {
     public partial class Forecast : System.Web.UI.Page
     {
