@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Forecast.aspx.cs" Inherits="WeatherForecase.Forecast" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Forecast.aspx.cs" Inherits="WeatherForecast.Forecast" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -112,8 +112,7 @@
           </div>
 
 </div>
-<!-- Loader placeholder -->
-  <div class="modal"><!-- Place at bottom of page --></div>
+  <div class="modal"></div>
         <script src="Scripts/forecast.js"></script>
 
 </body>
