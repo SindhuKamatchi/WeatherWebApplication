@@ -1,7 +1,6 @@
-// var weatherurl = "http://api.weatherapi.com/v1/forecast.json?key=apikey&q=cityname&aqi=yes&days=days";
-
-// This gives a "loading" icon when data is loading
-
+/*
+This javascript contains the function to make a call to weather API and to populate it in page.
+*/
 $body = $("body");
 
 window.onload = function () {
@@ -10,27 +9,36 @@ window.onload = function () {
 };
 
 $(document).bind({
-   ajaxStart: function() { $body.addClass("loading");   },
-   ajaxStop:  function() { $body.removeClass("loading");}
+    ajaxStart: function () { $body.addClass("loading"); },
+    ajaxStop: function () { $body.removeClass("loading"); }
 });
 
+/*
+This function is to get the days from weather API response
+*/
+
 function unixToDay(timestamp) {
-    let date = new Date(timestamp*1000);
+    let date = new Date(timestamp * 1000);
     let weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let weekday = weekdays[date.getDay()];
     return weekday;
 }
 
-function locationButtonClick (){
-  console.log ("button was clicked", $("#cityName").val());
+function locationButtonClick() {
+    console.log("button was clicked", $("#cityName").val());
     getWeatherDetails($(cityName).val());
-   
+
     $(".displayCondition").css("display", "inline-block");
     $(".card").css("display", "inline-block");
-    
+
 }
 
 $("#btn").on("click", locationButtonClick);
+
+/*
+This function is to call the Logging function to 
+record the request and response
+*/
 
 function Logging(request, response) {
     var Data = JSON.stringify({ request: request, response: response });
@@ -43,6 +51,13 @@ function Logging(request, response) {
     });
 }
 
+/*
+This function will make a ajax call
+to weatherAPI and fetch back the results.
+
+It also populates the containers in aspx page with reponse.
+*/
+
 function getWeatherDetails(cityName) {
     let weatherurl = "https://api.weatherapi.com/v1/forecast.json?key=adbcb3ee983843a7886205705220209&q=" + cityName + "&aqi=yes&days=7";
     var request = cityName;
@@ -51,10 +66,10 @@ function getWeatherDetails(cityName) {
         url: weatherurl,
         success: function (result) {
             dataType: 'json',
-            console.log(result);
+                console.log(result);
             let cityName = result.location.name;
             //var response =  JSON.stringify((result.forecast.forecastday));
-            var response="";
+            var response = "";
             displayCityName = cityName;
             $("#weather_place").text(displayCityName);
             for (var i = 0; i < 7; i++) {
@@ -86,5 +101,4 @@ function getWeatherDetails(cityName) {
             $(".card").css("display", "none");
         }
     });
-   
 }
