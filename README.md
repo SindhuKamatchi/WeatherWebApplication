@@ -3,4 +3,6 @@ Web Application to display 7 days weather The application is developed with simp
 
 Please run the application VS in admin mode as there is log file to be appended in CDrive.
 Logs.txt will be created in c drive to log request and response details displayed on screen.
+
+
 ![Screenshot](Screenshot.PNG)
