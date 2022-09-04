@@ -5,4 +5,4 @@ Please run the application VS in admin mode as there is log file to be appended 
 Logs.txt will be created in c drive to log request and response details displayed on screen.
 
 
-![Screenshot](Screenshot.PNG)
+![Screenshot](WebScreenshot.PNG)
