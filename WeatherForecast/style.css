@@ -15,18 +15,6 @@ body {
   }
 }
 
-/*this is the overall square displayed*/
-
-
-#headerTitle {
-  padding: 20px;
-  color: darkslategray;
-  font-family: 'Droid Serif', serif;
-  font-weight: bold;
-  font-size: 36px;
-  text-align: center;
-}
-
 #day0, #day1, #day2, #day3, #day4, #day5, #day6{
   font-size: 1.5vw;
   display: block;
@@ -49,21 +37,6 @@ body {
   margin: 0 auto;
 }
 
-#instructions {
-  font-family: 'Arial';
-  font-size: 18px;
-  font-weight: bold;
-  padding-bottom: 1px;
-  text-align: center;
-}
-
-#low0, #low1, #low2, #low3, #low4, #low5, #low6 {
-  display: block;
-  font-size: 1.4vw;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  text-align: center;
-}
 
 #setColumns {
   display: block;
@@ -89,6 +62,18 @@ body {
     #weather_img_icon0, #weather_img_icon1, #weather_img_icon2, #weather_img_icon3, #weather_img_icon4, #weather_img_icon5, #weather_img_icon6 {
     width: 5vw;
   }
+}
+
+#header {
+    text-align:center;
+    color:cornsilk;
+    font-size:2em;
+    font-style:revert;
+}
+
+#search {
+    text-align: center;
+    margin: 20px;
 }
 
 /* Start by setting display:none to make this hidden.
