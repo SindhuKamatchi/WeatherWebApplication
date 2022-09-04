@@ -20,15 +20,11 @@
                 <input type="text" id="cityName" class="form-control" placeholder="Enter city name">
                 <button id="btn" class="btn btn-primary">Search</button>
             </div>
-
         </div>
-
     </div>
 
 
     <div id="setColumns" class="align-items-center">
-
-
         <div class="card" style="color: #4B515D; border-radius: 35px;">
             <div class="displayCondition">
                 <div class="card-body p-4">
