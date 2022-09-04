@@ -61,6 +61,7 @@ It also populates the containers in aspx page with reponse.
 function getWeatherDetails(cityName) {
     let weatherurl = "https://api.weatherapi.com/v1/forecast.json?key=adbcb3ee983843a7886205705220209&q=" + cityName + "&aqi=yes&days=7";
     var request = cityName;
+   
     $.ajax({
 
         url: weatherurl,
@@ -92,7 +93,7 @@ function getWeatherDetails(cityName) {
                 let displayLowTemp = result.forecast.forecastday[i].day.mintemp_c;
                 $("#low" + int).html(displayLowTemp);
 
-                response = response + "  Day " + i + " " + "Cloudiness : " + cloudiness + "HighTemp " + displayHighTemp + + "LowTemp " + displayLowTemp;
+                response = response + "  Day " + i + " " + "Cloudiness : " + cloudiness + " HighTemp " + displayHighTemp +  "LowTemp " + displayLowTemp;
             }
             Logging(request, response);
         },
